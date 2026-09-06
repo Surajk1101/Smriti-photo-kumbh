@@ -9,6 +9,7 @@ import {
 import { StudioNavbar } from './components/studio/StudioNavbar';
 import { StudioHero } from './components/studio/StudioHero';
 import { YouTubeShowcase } from './components/studio/YouTubeShowcase';
+import { InstagramProfileBanner } from './components/studio/InstagramProfileBanner';
 import { StudioServices } from './components/studio/StudioServices';
 import { StudioGallery } from './components/studio/StudioGallery';
 import { PrintEstimator } from './components/studio/PrintEstimator';
@@ -43,6 +44,10 @@ export default function App() {
         }
         if (!parsed.instagram) {
           parsed.instagram = defaultShopInfo.instagram;
+        }
+        if (!parsed.youtubeVideoId || parsed.youtubeVideoId === '3J2LdMhqS5U') {
+          parsed.youtubeVideoId = defaultShopInfo.youtubeVideoId;
+          parsed.youtubeUrl = defaultShopInfo.youtubeUrl;
         }
         return parsed;
       }
@@ -102,6 +107,12 @@ export default function App() {
         <YouTubeShowcase
           shopInfo={shopInfo}
           onBookClick={() => handleBookClick('YouTube Video Production Inquiry')}
+        />
+
+        {/* Instagram Profile Banner & Best Pictures */}
+        <InstagramProfileBanner
+          shopInfo={shopInfo}
+          onBookClick={() => handleBookClick('Instagram Style Photography Inquiry')}
         />
 
         {/* Studio Services & Capabilities */}

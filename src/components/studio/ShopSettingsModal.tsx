@@ -36,7 +36,7 @@ export const ShopSettingsModal: React.FC<ShopSettingsModalProps> = ({
 
   // Extract youtube video ID helper if full URL is pasted
   const handleYoutubeChange = (url: string) => {
-    let videoId = '3J2LdMhqS5U';
+    let videoId = defaultShopInfo.youtubeVideoId || 'tsjfpKFTP5g';
     const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
     if (match && match[1]) {
       videoId = match[1];

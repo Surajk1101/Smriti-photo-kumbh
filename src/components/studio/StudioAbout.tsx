@@ -21,16 +21,16 @@ export const StudioAbout: React.FC<StudioAboutProps> = ({
             <div className="relative mx-auto max-w-md">
               
               {/* Primary Large Image */}
-              <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-4/5 bg-neutral-900 relative group">
+              <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[3/4] bg-neutral-900 relative group">
                 <img
-                  src="/images/wedding_jaimala_gaze.jpg"
-                  alt="Smriti Photo Kumbh - Sacred Varmala Ceremony Photography"
+                  src="/images/instagram_heritage_couple.jpg"
+                  alt="Smriti Photo Kumbh - Sacred Marriage Ceremony Photography"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/60 via-transparent to-transparent pointer-events-none" />
                 <div className="absolute bottom-4 left-4 right-4 text-white text-xs pointer-events-none drop-shadow-md font-medium">
-                  Sacred Varmala • In-House Wedding Cinematography
+                  Royal Marriage Ceremony • In-House Wedding Cinematography
                 </div>
               </div>
 

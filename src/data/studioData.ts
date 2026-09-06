@@ -1,4 +1,4 @@
-import { ShopInfo, GalleryItem, StudioService, StudioPackage, PrintSizeOption, FrameTypeOption } from '../types/studio';
+import { ShopInfo, YouTubeVideoItem, GalleryItem, StudioService, StudioPackage, PrintSizeOption, FrameTypeOption } from '../types/studio';
 
 export const defaultShopInfo: ShopInfo = {
   name: 'Smriti Photo Kumbh',
@@ -12,8 +12,8 @@ export const defaultShopInfo: ShopInfo = {
   city: 'Ghaziabad',
   state: 'Uttar Pradesh - 201020',
   hours: 'Open 7 Days: 8:00 AM – 9:30 PM (Available 24/7 for Scheduled Shoots)',
-  youtubeUrl: 'https://youtu.be/3J2LdMhqS5U?si=MmjqCgJ92BKhEGD1',
-  youtubeVideoId: '3J2LdMhqS5U',
+  youtubeUrl: 'https://youtu.be/tsjfpKFTP5g?si=HmWPIEtE2Wz5dkr1',
+  youtubeVideoId: 'tsjfpKFTP5g',
   instagram: 'https://www.instagram.com/samriddhi.photo/',
   establishedYear: '2011',
 };
@@ -250,4 +250,27 @@ export const frameTypeOptions: FrameTypeOption[] = [
   { type: 'teak-wood', name: 'Natural Teakwood Grain', description: 'Durable solid wood finish with warm natural organic texture' },
   { type: 'acrylic-glass', name: 'Seamless Crystal Acrylic Glass', description: 'Modern borderless frameless acrylic with high-gloss floating look' },
   { type: 'canvas-wrap', name: 'Textured Canvas Gallery Wrap', description: '100% cotton painterly canvas stretched on 1.5-inch pine frame' },
+];
+
+export const studioYouTubeVideos: YouTubeVideoItem[] = [
+  {
+    id: 'vid-wedding-cinematic',
+    videoId: 'tsjfpKFTP5g',
+    title: 'Grand Indian Wedding Cinematography & Royal Teaser',
+    category: 'Wedding Cinematography & Highlights',
+    duration: '4K Ultra HD',
+    url: 'https://youtu.be/tsjfpKFTP5g?si=HmWPIEtE2Wz5dkr1',
+    description: 'Breathtaking 4K wedding cinema featuring royal bridal entry, emotional jaimala exchange, vibrant family celebrations, and slow-motion cinematic drone footage by Smriti Photo Kumbh.',
+    featured: true,
+  },
+  {
+    id: 'vid-kumbh-sangam',
+    videoId: '3J2LdMhqS5U',
+    title: 'Kumbh Sacred Rituals, Triveni Sangam & Maha Aarti Documentary',
+    category: 'Sacred Rituals & Documentary',
+    duration: '4K Ultra HD',
+    url: 'https://youtu.be/3J2LdMhqS5U?si=MmjqCgJ92BKhEGD1',
+    description: 'Spiritual documentary capturing the holy confluence of Ganga & Yamuna, Vedic chants, sunset boat prayers, and glowing evening Maha Aarti at Triveni Sangam.',
+    featured: false,
+  },
 ];

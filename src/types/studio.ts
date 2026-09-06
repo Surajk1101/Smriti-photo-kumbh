@@ -16,10 +16,21 @@ export interface ShopInfo {
   establishedYear: string;
 }
 
+export interface YouTubeVideoItem {
+  id: string;
+  videoId: string;
+  title: string;
+  category: string;
+  description: string;
+  duration?: string;
+  url: string;
+  featured?: boolean;
+}
+
 export interface GalleryItem {
   id: string;
   title: string;
-  category: 'Kumbh & Spiritual' | 'Weddings & Celebrations' | 'Studio Portraits' | 'Frames & Canvas';
+  category: 'Kumbh & Spiritual' | 'Weddings & Celebrations' | 'Studio Portraits' | 'Frames & Canvas' | 'Haldi & Mehendi' | string;
   imageUrl: string;
   location: string;
   description: string;

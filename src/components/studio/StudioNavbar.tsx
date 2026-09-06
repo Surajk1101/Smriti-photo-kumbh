@@ -22,10 +22,11 @@ export const StudioNavbar: React.FC<StudioNavbarProps> = ({
 
   const navLinks = [
     { label: 'Home', href: '#home' },
-    { label: 'YouTube Video', href: '#youtube-showcase' },
+    { label: 'Videos', href: '#youtube-showcase' },
+    { label: 'Instagram', href: '#instagram-banner' },
     { label: 'Services', href: '#services' },
-    { label: 'Photo Gallery', href: '#gallery' },
-    { label: 'Framing & Prints', href: '#framing' },
+    { label: 'Gallery', href: '#gallery' },
+    { label: 'Framing', href: '#framing' },
     { label: 'Packages', href: '#packages' },
     { label: 'About', href: '#about' },
     { label: 'Contact', href: '#contact' },
@@ -98,35 +99,38 @@ export const StudioNavbar: React.FC<StudioNavbarProps> = ({
 
       {/* Main Navigation Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 gap-3 xl:gap-6">
           
           {/* Logo Branding */}
-          <a href="#home" id="studio-brand-logo" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500 via-orange-600 to-amber-700 flex items-center justify-center text-white shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform">
-              <Camera className="w-6 h-6" />
+          <a href="#home" id="studio-brand-logo" className="flex items-center gap-3 group shrink-0 select-none py-1">
+            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-amber-500 via-orange-600 to-amber-700 flex items-center justify-center text-white shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform shrink-0">
+              <Camera className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col justify-center">
               <div className="flex items-center gap-2">
-                <span className="text-xl sm:text-2xl font-black tracking-tight text-neutral-950 font-['Outfit']">
+                <span className="text-lg sm:text-xl xl:text-2xl font-black tracking-tight text-neutral-950 font-['Outfit'] whitespace-nowrap leading-none">
                   {shopInfo.name}
                 </span>
-                <span className="hidden sm:inline-block px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-100 text-amber-900 border border-amber-200">
-                  {shopInfo.hindiName}
-                </span>
+                {shopInfo.hindiName && (
+                  <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded-md text-[10px] sm:text-[11px] font-bold bg-amber-50 text-amber-900 border border-amber-300/80 whitespace-nowrap shadow-2xs">
+                    {shopInfo.hindiName}
+                  </span>
+                )}
               </div>
-              <span className="text-xs text-neutral-500 font-medium tracking-wide">
-                Professional Photography & 4K Cinematography
-              </span>
+              <p className="text-[11px] sm:text-xs text-neutral-600 font-semibold tracking-tight whitespace-nowrap mt-1 flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-orange-600 shrink-0" />
+                <span>Professional Photography &amp; 4K Cinematography</span>
+              </p>
             </div>
           </a>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-1.5 xl:gap-3.5 shrink-0">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-semibold text-neutral-700 hover:text-orange-600 transition-colors"
+                className="text-xs xl:text-sm font-bold text-neutral-700 hover:text-orange-600 hover:bg-neutral-100/70 px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap"
               >
                 {link.label}
               </a>
@@ -134,7 +138,7 @@ export const StudioNavbar: React.FC<StudioNavbarProps> = ({
           </nav>
 
           {/* Right Action Buttons */}
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden sm:flex items-center gap-2.5 shrink-0">
             {/* WhatsApp Direct */}
             <a
               href={`https://wa.me/${cleanWhatsapp}?text=${encodeURIComponent(
@@ -143,7 +147,7 @@ export const StudioNavbar: React.FC<StudioNavbarProps> = ({
               target="_blank"
               rel="noreferrer"
               id="btn-nav-whatsapp"
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 transition-colors"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 transition-colors whitespace-nowrap"
             >
               <MessageCircle className="w-4 h-4 text-emerald-600" />
               <span>WhatsApp Us</span>
@@ -153,7 +157,7 @@ export const StudioNavbar: React.FC<StudioNavbarProps> = ({
             <button
               onClick={onBookClick}
               id="btn-nav-book-shoot"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 shadow-sm hover:shadow transition-all cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3.5 xl:px-4 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 shadow-sm hover:shadow transition-all cursor-pointer whitespace-nowrap"
             >
               <span>Book Shoot / Prints</span>
               <ArrowRight className="w-3.5 h-3.5" />
